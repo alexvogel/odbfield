@@ -378,30 +378,30 @@ class field(object):
                 ergebnis = str(output)
             
             if self.postfunction == "value_1":
-                search = re.search('([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*)\s*,?*\s*([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)\s*,?*\s*([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)', str(output))
+                search = re.search('\[\s*([^,\s]+)\s*,?\s*([^,\s]+)\s*,?\s*([^,\s]+)\s*\]', str(output))
                 if (search):
                     ergebnis = str(search.group(1))
                 else:
                     ergebnis = "output '"+str(output)+"' doesn't match pattern used in postfunction 'value_1'"
 
             elif self.postfunction == "value_2":
-                search = re.search('([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*)\s*,?*\s*([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)\s*,?*\s*([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)', str(output))
+                search = re.search('\[\s*([^,\s]+)\s*,?\s*([^,\s]+)\s*,?\s*([^,\s]+)\s*\]', str(output))
                 if (search):
-                    ergebnis = str(search.group(3))
+                    ergebnis = str(search.group(2))
                 else:
                     ergebnis = "output '"+str(output)+"' doesn't match pattern used in postfunction 'value_2'"
 
             elif self.postfunction == "value_3":
-                search = re.search('([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*)\s*,?*\s*([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)\s*,?*\s*([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)', str(output))
+                search = re.search('\[\s*([^,\s]+)\s*,?\s*([^,\s]+)\s*,?\s*([^,\s]+)\s*\]', str(output))
                 if (search):
-                    ergebnis = str(search.group(5))
+                    ergebnis = str(search.group(3))
                 else:
                     ergebnis = "output '"+str(output)+"' doesn't match pattern used in postfunction 'value_3'"
 
             elif self.postfunction == "vector":
-                search = re.search('([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*)\s*,?*\s*([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)\s*,?*\s*([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)', str(output))
+                search = re.search('\[\s*([^,\s]+)\s*,?\s*([^,\s]+)\s*,?\s*([^,\s]+)\s*\]', str(output))
                 if (search):
-                    ergebnis = str(search.group())
+                    ergebnis = str(search.group(1)+" "+search.group(2)+" "+search.group(3))
                 else:
                     ergebnis = "output '"+str(output)+"' doesn't match pattern used in postfunction 'vector'"
 
