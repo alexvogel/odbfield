@@ -15,6 +15,7 @@ digodb_date = "Jul 24 2012"
 #                       Wenn Koordinatensystem ein \s oder ; im Namen tragen, werden sie im Informationsprint der interaktiven Ausgabe in Anfuehrungszeichen gesetzt 
 # 0.10    02.04.2012    Absturz bei nicht vorhandenen Instance-Namen behoben
 # 0.11    24.07.2012    postfunctions zerteilen vektoren jetzt auch wenn kein ',' als trennzeichen vorhanden ist. (ab abaqus v6.11)
+# 0.2.0   27.06.2014    postfunctions zerteilen vektoren update (fehler bei vektor mit muster /0. 0. 0./ behoben)
 
 #print "Script dir: ", os.path.realpath(os.path.dirname(sys.argv[0]))
 
