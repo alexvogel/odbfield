@@ -1,7 +1,7 @@
 import sys
 import os
-digodb_version = "0.11"
-digodb_date = "Jul 24 2012"
+digodb_version = "[% version %]"
+digodb_date = "[% date %]"
 
 # 0.02    Version bei BMW
 # 0.03    25.05.2011    Wenn das Ergebnis ein Array mit genau 3 kommagetrennten Werten enthaelt, so werden die Werte ohne Klammern etc ausgegeben 
@@ -27,7 +27,7 @@ from field import *
 
 # Definieren der Kommandozeilenparameter
 parser = argparse.ArgumentParser(description='a tool for obtaining information (field output) from an abaqus output database file (odb).',
-                                 epilog='author: alexander.vogel@caegroup.de | version: '+digodb_version+' | date: '+digodb_date)
+                                 epilog='author: alexander.vogel@prozesskraft.de | version: '+digodb_version+' | date: '+digodb_date)
 parser.add_argument('--odb', metavar='ODBFILE', type=str, required=True,
                    help='abaqus output database file')
 parser.add_argument('--framenr', metavar='FRAMENR', action='store',
