@@ -73,7 +73,7 @@ class field(object):
             if (self.batch == False):
                 print "no update is required for odb-File "+odbfile
             
-            odb=openOdb(odbfile)
+            odb=openOdb(odbfile, readOnly=True)
             return(odb)
 
 # =============================
