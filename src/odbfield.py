@@ -3,7 +3,7 @@ import os
 digodb_version = "[% version %]"
 digodb_date = "[% date %]"
 
-# 0.02    Version bei BMW
+# 0.02    Version
 # 0.03    25.05.2011    Wenn das Ergebnis ein Array mit genau 3 kommagetrennten Werten enthaelt, so werden die Werte ohne Klammern etc ausgegeben 
 # 0.04    30.11.2011    Zusaetzlicher Parameter 'coordsys' implementiert
 # 0.05    17.01.2012    Zusaetzlicher Parameter 'postfunction' implementiert
