@@ -1,4 +1,4 @@
-# odbhistory
+# odbfield
 
 extract field data from Abaqus odb files
 
